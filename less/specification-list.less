@@ -1,0 +1,93 @@
+@bg-green: rgb(104, 183, 56);
+@tablet-width: 768px;
+@desktop-width: 1300px;
+
+.specification-list__item {
+  position: relative;
+}
+.specification-list__description {
+  margin: 0;
+  margin-left: 80px;
+  color: #444444;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.specification-list__description::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: @bg-green;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.specification-list__item:first-child .specification-list__description::before {
+  background-image: url("img/advantage-1.png");
+}
+.specification-list__item:nth-child(2) .specification-list__description::before {
+  background-image: url("img/advantage-2.png");
+}
+.specification-list__item:nth-child(3) .specification-list__description::before {
+  background-image: url("img/advantage-3.png");
+}
+.specification-list__item:nth-child(4) .specification-list__description::before {
+  background-image: url("img/advantage-4.png");
+}
+
+
+@media (min-width: @tablet-width) {
+  .specification-list__item {
+    min-height: 230px;
+  }
+  .specification-list__item .specification-list__description::after {
+    content: "";
+    display: inline;
+    width: 136px;
+    height: 230px;
+
+    position: absolute;
+    left: 120px;
+    top: 90px;
+    z-index: -10;
+
+    font-size: 270px;
+    font-family: "Oswald";
+    color: rgb(242, 242, 242);
+  }
+  .specification-list__item:first-child .specification-list__description::after {
+    content: "1";
+  }
+  .specification-list__item:nth-child(2) .specification-list__description::after {
+    content: "2";
+  }
+  .specification-list__item:nth-child(3) .specification-list__description::after {
+    content: "3";
+  }
+  .specification-list__item:nth-child(4) .specification-list__description::after {
+    content: "4";
+  }
+
+  .specification-list__description {
+    width: 70%;
+    margin: 0;
+    margin-top: 110px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .specification-list__description::before {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .specification-list__description {
+    width: 100%;
+  }
+}

@@ -1,0 +1,39 @@
+@tablet-width: 768px;
+@desktop-width: 1300px;
+@bg-green: rgb(104, 183, 56);
+
+.copyright {
+}
+
+.copyright__link  {
+  max-width: 500px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  color: #444444;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+
+  &:hover {
+    color: #68b738;
+  }
+}
+
+.copyright__logo-image {
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__link  {
+    font-size: 16px;
+  }
+  .copyright__logo-image {
+    margin-left: 20px;
+  }
+
+}

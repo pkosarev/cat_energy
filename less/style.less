@@ -1,0 +1,77 @@
+@bg-green: rgb(104, 183, 56);
+@tablet-width: 768px;
+@desktop-width: 1300px;
+
+body {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+h1,
+.header-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 25px 20px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+
+  text-align: left;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: Oswald, Arial, sans-serif;
+  color: rgb(17, 17, 17);
+}
+@media (min-width: @tablet-width) {
+  h1,
+  .header-form {
+    max-width: 940px;
+    padding: 30px;
+    margin: 0 auto;
+    border: none;
+    font-size: 60px;
+  }
+}
+@media (min-width: @desktop-width) {
+  h1,
+  .header-form {
+    max-width: 1220px;
+    padding: 40px;
+  }
+}
+.header-form {
+  border-bottom: none;
+}
+.page-main {
+  position: relative;
+}
+
+.button {
+  background-color: @bg-green;
+
+  &:hover {
+    background-color: darken(@bg-green, 5%);
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import "page-header.less";
+@import "visually-hidden.less";
+@import "choose-program.less";
+@import "nutrition-programs.less";
+@import "prog-list.less";
+@import "how-it-works.less";
+@import "example.less";
+@import "specification-list.less";
+@import "page-footer.less";
+@import "social.less";
+@import "copyright.less";
+@import "catalog.less";
+@import "Additional-goods.less";
+@import "form.less";
+
+@font-face {
+  font-family: 'Oswald', sans-serif;
+}
