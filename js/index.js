@@ -35,5 +35,3 @@ btnBefore.onclick = function () {
   document.getElementById("example__range").value = 0;
 
 }
-
-console.log('hi');
